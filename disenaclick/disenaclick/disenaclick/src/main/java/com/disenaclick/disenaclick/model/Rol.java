@@ -19,12 +19,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Rol {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
     private String nombreRol;
+
+    
 
 }

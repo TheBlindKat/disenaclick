@@ -35,9 +35,8 @@ public class Pagina {
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
+    
 
-    @ManyToOne
-    @JoinColumn(name = "plantilla_id", nullable = false)
-    private Usuario plantilla;
+
 
 }

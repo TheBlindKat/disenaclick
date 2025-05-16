@@ -29,5 +29,10 @@ public class Plantilla {
 
     @Column(length = 30, nullable = true)
     private String enlace;
+    
+
+
+
+
 
 }
