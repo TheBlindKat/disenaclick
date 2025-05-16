@@ -1,0 +1,19 @@
+package com.disenaclick.disenaclick.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.disenaclick.disenaclick.model.Usuario;
+import java.util.List;
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+
+    List<Usuario> findByNombres(String nombres);
+
+    Usuario findByCorreo(String correo);
+
+    List<Usuario> findByNombresAndApellidos(String nombres, String apellidos);
+
+    Usuario findById(Integer id);
+
+}
