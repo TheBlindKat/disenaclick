@@ -2,35 +2,32 @@ package com.disenaclick.disenaclick.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "seccionpagina")
+@Table(name = "categorias_negocios")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 
-public class SeccionPagina {
-
+public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
-    private String titulo;
+    private String Tipo;
 
-    @Column(length = 200, nullable = false)
-    private String parrafo;
+    @Column(nullable = false)
+    private String NombreNegocio;
 
-    /*
-     * @Column(nullable = false)
-     * private aqui va el de img que se habilitara en el futuro
-     */
+    @Column(length = 50, nullable = false)
+    private String UrleNegocio;
 
 }
