@@ -39,6 +39,6 @@ public class Pagina {
 
     @OneToOne
     @JoinColumn(name = "plantilla_id", nullable = false)
-    private Usuario plantilla;
+    private Plantilla plantilla;
 
 }
