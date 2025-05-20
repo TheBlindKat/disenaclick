@@ -22,12 +22,12 @@ public class Categoria {
     private Integer id;
 
     @Column(nullable = false)
-    private String Tipo;
+    private String tipo;
 
     @Column(nullable = false)
-    private String NombreNegocio;
+    private String nombreNegocio;
 
     @Column(length = 50, nullable = false)
-    private String UrleNegocio;
+    private String urleNegocio;
 
 }

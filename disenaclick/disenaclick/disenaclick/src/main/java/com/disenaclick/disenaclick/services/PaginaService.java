@@ -40,20 +40,22 @@ public class PaginaService {
     }
 
     public Pagina patchPagina(Long id, Pagina parcialPagina) {
-        Pagina paginaUpdate = paginaRepository.findById(id).orElse(null);
-        if (paginaUpdate != null) {
+        Pagina paginaToUpdate = paginaRepository.findById(id).orElse(null);
+        if (paginaToUpdate != null) {
+
+            if (parcialPagina.getNombrePagina() != null) {
+                paginaToUpdate.setNombrePagina(parcialPagina.getNombrePagina());
+            }
+            if (parcialPagina.getFechaCreacion() != null) {
+                paginaToUpdate.setFechaCreacion(parcialPagina.getFechaCreacion());
+            }
+            if (parcialPagina.getUsuario() != null) {
+                paginaToUpdate.setUsuario(parcialPagina.getUsuario());
+            }
+            return paginaRepository.save(paginaToUpdate);
+        } else {
             return null;
         }
-        if (parcialPagina.getNombrePagina() != null) {
-            paginaUpdate.setNombrePagina(parcialPagina.getNombrePagina());
-        }
-        if (parcialPagina.getFechaCreacion() != null) {
-            paginaUpdate.setFechaCreacion(parcialPagina.getFechaCreacion());
-        }
-        if (parcialPagina.getUsuario() != null) {
-            paginaUpdate.setUsuario(parcialPagina.getUsuario());
-        }
-        return paginaRepository.save(paginaUpdate);
-
     }
+
 }

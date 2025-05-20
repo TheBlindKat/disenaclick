@@ -72,7 +72,7 @@ public class PaginaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    public ResponseEntity<?> eliminar(@PathVariable Long id) {
         try {
             paginaService.delete(id);
             return ResponseEntity.noContent().build();

@@ -21,18 +21,13 @@ public class Plantilla {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(length = 40, nullable = true)
+    @Column(length = 40, nullable = false)
     private String nombrePlantilla;
 
-    @Column(length = 15, nullable = true)
+    @Column(length = 15, nullable = false)
     private String color;
 
-    @Column(length = 30, nullable = true)
+    @Column(length = 30, nullable = false)
     private String enlace;
-    
-
-
-
-
 
 }
